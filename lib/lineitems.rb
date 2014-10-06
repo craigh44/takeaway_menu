@@ -1,22 +1,27 @@
 class LineItems
+	require_relative "message"
 
 
 	def initialize
-		@dishes = []
+		@linedishes = []
 		@prices = []
 	end
 
 	def add(dish, price)
-		@dishes << dish
+		@linedishes << dish
 		@prices << price
 	end
 
 	 def dish_list
-		@dishes
+		@linedishes
 	 end	
 
 	 def total
 	 	@prices.inject{|sum,x| sum + x }
+	 end
+
+	 def order(message)
+	 	message.send_message
 	 end
 
 

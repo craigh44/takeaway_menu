@@ -1,5 +1,7 @@
 # class Message
+class Message
 
+	def send_message
 # def send_message
 	require 'rubygems' # not necessary with ruby 1.9 but included for completeness 
 	require 'twilio-ruby' 
@@ -22,8 +24,7 @@
 		body: "Thank you for your order, it will arrive #{time2}"
 	})
 # end
-
-# end
+end end
 
 # t = Time.now
 # p t.strftime("at %I:%M%p")
